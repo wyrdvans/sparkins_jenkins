@@ -1,0 +1,48 @@
+{
+  "revision_id": "ddca8446e0f6e29a3496fcafa822f012b489475420491c65a1a7e7bb10fa164e",
+  "name": "sparkins_jenkins",
+  "run_list": [
+    "recipe[sparkins_jenkins::default]"
+  ],
+  "cookbook_locks": {
+    "sparkins_jenkins": {
+      "version": "0.1.0",
+      "identifier": "c39531c887444d1de24c3282c7013b2ca50467cf",
+      "dotted_decimal_identifier": "55051661508822093.8411591217432321.65062933129167",
+      "source": "cookbooks/sparkins_jenkins",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "4a94d534c3e58b28ac24b00045117b8e80026924",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "cookbooks/sparkins_jenkins"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "sparkins_jenkins",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "sparkins_jenkins (0.1.0)": [
+
+      ]
+    }
+  }
+}
