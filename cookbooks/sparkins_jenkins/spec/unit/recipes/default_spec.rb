@@ -16,5 +16,9 @@ describe 'sparkins_jenkins::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
+    it 'should include the jenkins::master recipe' do
+      expect(chef_run).to include_recipe('jenkins::master')
+    end
   end
 end

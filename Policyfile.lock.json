@@ -1,5 +1,5 @@
 {
-  "revision_id": "ddca8446e0f6e29a3496fcafa822f012b489475420491c65a1a7e7bb10fa164e",
+  "revision_id": "0db6be189ff5f58926ff5615a1997156c4e4cbdb7cc13c443f64bfed68486d09",
   "name": "sparkins_jenkins",
   "run_list": [
     "recipe[sparkins_jenkins::default]"
@@ -7,14 +7,14 @@
   "cookbook_locks": {
     "sparkins_jenkins": {
       "version": "0.1.0",
-      "identifier": "c39531c887444d1de24c3282c7013b2ca50467cf",
-      "dotted_decimal_identifier": "55051661508822093.8411591217432321.65062933129167",
+      "identifier": "3104583c1d04f2a1beeb396da5a7fb1c71c68016",
+      "dotted_decimal_identifier": "13797050870990066.45527388740494759.276099586490390",
       "source": "cookbooks/sparkins_jenkins",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": null,
-        "revision": "4a94d534c3e58b28ac24b00045117b8e80026924",
+        "revision": "fe65fdca7663286defea2962a5be87faacb1b6fb",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -23,6 +23,61 @@
       },
       "source_options": {
         "path": "cookbooks/sparkins_jenkins"
+      }
+    },
+    "jenkins": {
+      "version": "2.4.1",
+      "identifier": "9d79c8cf3832e31c19f29ea978a25923293ca1a2",
+      "dotted_decimal_identifier": "44325474720559843.7909829182584994.98007550566818",
+      "cache_key": "jenkins-2.4.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/jenkins/versions/2.4.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/jenkins/versions/2.4.1/download",
+        "version": "2.4.1"
+      }
+    },
+    "apt": {
+      "version": "2.9.2",
+      "identifier": "aa7652cc9ec61ee4603d984cb5770169987ae0ea",
+      "dotted_decimal_identifier": "47980844033164830.64282112354465143.1553041383658",
+      "cache_key": "apt-2.9.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/2.9.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/2.9.2/download",
+        "version": "2.9.2"
+      }
+    },
+    "runit": {
+      "version": "1.7.4",
+      "identifier": "6d3856b0414bb6676c1dc67e4bac35a2f701a70b",
+      "dotted_decimal_identifier": "30742717436873654.29110797741214636.58974045054731",
+      "cache_key": "runit-1.7.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/runit/versions/1.7.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/runit/versions/1.7.4/download",
+        "version": "1.7.4"
+      }
+    },
+    "yum": {
+      "version": "3.8.2",
+      "identifier": "0019632f8d8ade4a7e8b746ea581db731250a6b0",
+      "dotted_decimal_identifier": "27913790261982.20968285695550849.241287274997424",
+      "cache_key": "yum-3.8.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/3.8.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/3.8.2/download",
+        "version": "3.8.2"
+      }
+    },
+    "packagecloud": {
+      "version": "0.1.0",
+      "identifier": "860429f5a51398133c1465237ddfeb0f256e8e08",
+      "dotted_decimal_identifier": "37722225140634520.5414082851339743.258450285039112",
+      "cache_key": "packagecloud-0.1.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/packagecloud/versions/0.1.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/packagecloud/versions/0.1.0/download",
+        "version": "0.1.0"
       }
     }
   },
@@ -37,10 +92,62 @@
       [
         "sparkins_jenkins",
         ">= 0.0.0"
+      ],
+      [
+        "jenkins",
+        "= 2.4.1"
+      ],
+      [
+        "apt",
+        "= 2.9.2"
+      ],
+      [
+        "runit",
+        "= 1.7.4"
+      ],
+      [
+        "yum",
+        "= 3.8.2"
+      ],
+      [
+        "packagecloud",
+        "= 0.1.0"
       ]
     ],
     "dependencies": {
       "sparkins_jenkins (0.1.0)": [
+        [
+          "jenkins",
+          ">= 0.0.0"
+        ]
+      ],
+      "jenkins (2.4.1)": [
+        [
+          "apt",
+          "~> 2.0"
+        ],
+        [
+          "runit",
+          "~> 1.5"
+        ],
+        [
+          "yum",
+          "~> 3.0"
+        ]
+      ],
+      "apt (2.9.2)": [
+
+      ],
+      "runit (1.7.4)": [
+        [
+          "packagecloud",
+          ">= 0.0.0"
+        ]
+      ],
+      "yum (3.8.2)": [
+
+      ],
+      "packagecloud (0.1.0)": [
 
       ]
     }
