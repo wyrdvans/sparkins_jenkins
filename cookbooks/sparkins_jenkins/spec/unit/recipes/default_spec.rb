@@ -17,8 +17,12 @@ describe 'sparkins_jenkins::default' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'should include the git::default recipe' do
+    it 'should install git' do
       expect(chef_run).to include_recipe('git')
+    end
+
+    it 'should setup an email server' do
+      expect(chef_run).to install_package('mailutils')
     end
     
     it 'should include the jenkins::master recipe' do

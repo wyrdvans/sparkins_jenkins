@@ -7,6 +7,8 @@ include_recipe 'jenkins::master'
 
 include_recipe 'git'
 
+package 'mailutils'
+
 %w(git email-ext).each do |plugin|
   jenkins_plugin plugin do
     notifies :restart, 'service[jenkins]', :immediately

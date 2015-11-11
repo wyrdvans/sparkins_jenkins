@@ -1,5 +1,5 @@
 {
-  "revision_id": "9349906dba0e4717d8981f4144cef8cfbc8abf523fd1246adb98c1e48d95f9b9",
+  "revision_id": "f67d926e3726e886715fd14244a4f16bda86a1dffdae5f78c9a01f7b1a04e4f1",
   "name": "sparkins_jenkins",
   "run_list": [
     "recipe[sparkins_jenkins::default]"
@@ -7,14 +7,14 @@
   "cookbook_locks": {
     "sparkins_jenkins": {
       "version": "0.1.0",
-      "identifier": "cf28e2e1295ab74e0c42082ea4d5449344ca1c54",
-      "dotted_decimal_identifier": "58310275084409527.21968525928080597.75399304977492",
+      "identifier": "000b7c58c6b1168e93e390193f7e5ae9b9a2453d",
+      "dotted_decimal_identifier": "12628693266710.40132052277346174.99959888299325",
       "source": "cookbooks/sparkins_jenkins",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/wyrdvans/sparkins_jenkins.git",
-        "revision": "5100bfc67859aa861266d0c32edb37d5d5fa5143",
+        "revision": "60f3b8d77e37579c7ef28b9665b7886bed2516da",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
