@@ -29,6 +29,10 @@ describe 'sparkins_jenkins::default' do
       expect(chef_run).to install_jenkins_plugin('git')
     end
 
+    it 'should install the email-ext plugin' do
+      expect(chef_run).to install_jenkins_plugin('email-ext')
+    end
+
     it 'should notify jenkins to restart' do
       git_plugin = chef_run.jenkins_plugin('git')
       expect(git_plugin).to notify('service[jenkins]')
